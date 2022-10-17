@@ -1,0 +1,260 @@
+*
+body {
+    display: grid;
+    grid-template-rows: 65% 35%;
+    font-family: 'League Spartan', sans-serif;
+}
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    z-index: 1;
+}
+.hero1 {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img1 {
+    background-image: url(/images/desktop-image-hero-1.jpg);
+}
+.img2 {
+    background-image: url(/images/desktop-image-hero-2.jpg);
+}
+.img3 {
+    background-image: url(/images/desktop-image-hero-3.jpg);
+}
+.hero1 nav ul li {
+    list-style-type: none;
+    padding: 15px;
+}
+.hero1 nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+.menu {
+    display: flex;
+    transition: 0.6s ease-in;
+}
+.overlay {
+    display: none;
+}
+.mobile-head {
+    display: none;
+}
+.logo {
+    padding: 0 30px;
+    width: 50px;
+    height: 10px;
+}
+.herotext {
+   padding: 30px 40px 80px 70px;
+}
+.herotext p {
+    color: hsl(0, 0%, 27%);
+    font-weight: 500;
+}
+.hero {
+    position: relative;
+}
+.shopnow {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.shopnow span {
+    letter-spacing: 10px;
+}
+.shopnow span:hover {
+    color: hsl(0, 0%, 63%);
+}
+.heroheading {
+    font-weight: 700;
+    font-size: 45px;
+    padding: 0px;
+    letter-spacing: 0px;
+}
+.anglebtns {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+}
+.mobile-anglebtns {
+    display: none;
+}
+.leftbtn, .rightbtn {
+    background-color: black;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.leftbtn:hover, .rightbtn:hover {
+    background-color: hsl(0, 0%, 27%);
+}
+aside {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+.asidetext {
+    padding: 40px 50px;
+}
+.asidetext p {
+    color: hsl(0, 0%, 27%);
+}
+.asideheader {
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.aside-darkimg {
+    background-image: url(/images/image-about-dark.jpg);
+    background-repeat: no-repeat;
+}
+.aside-lightimg {
+    background-image: url(/images/image-about-light.jpg);
+    background-repeat: no-repeat;
+}
+.close {
+    display: none;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  .menucontent {
+    display: flex;
+  }
+@media only screen and (max-width: 960px) {
+    .asidetext {
+        padding: 30px 20px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    body {
+        display: grid;
+        grid-template-rows: 45em;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    .herotext {
+        padding: 20px;
+    }
+    .hero1  {
+        position: relative;
+    }
+    .mobile-anglebtns {
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+    .anglebtns {
+        display: none;
+    }
+    aside {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100% 100% 100%;
+    }
+    .aside-darkimg {
+        background-size: 100% 100%;
+    }
+    .aside-lightimg {
+        background-size: 100% 100%;
+    }
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%; 
+        transition: 0.8s ease-in-out;
+        z-index: 1;
+    }
+    .menucontent {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 20px 0px;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        transition: 0.6s ease-in;
+        z-index: 12;
+    }
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 100em;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 11;
+    }
+    .active {
+        display: flex;
+        transition: 1.5s ease;
+    }
+    .hero1 nav ul li a {
+        color: black;
+    }
+    .mobile-head {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: none;
+    }
+    .close {
+        display: block;
+        padding-right: 20px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .herotext {
+        padding: 20px;
+    }
+    .close {
+        padding-right: 50px;
+    }
+    .hero1 nav ul li {
+        padding: 10px;
+    }
+    .heroheading {
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .close {
+        padding-right: 30px;
+    }
+    .hero1 nav ul li {
+        padding: 5px;
+    }
+    .asidetext {
+        padding: 0px;
+    }
+    .herotext {
+        padding: 0px;
+    }
+}
